@@ -1,3 +1,8 @@
+'use strict';
+
+// Викристовується для створення обєктів зі складними станами, можу бути додатково використаний слой абстракцій - директор
+// який керує декількома будівельниками (тут цього немає)
+
 class Car {
     constructor() {
         this.autoPilot = false;
@@ -16,8 +21,8 @@ class CarBuilder {
         return this;
     }
 
-    addParktronic(autopilot) {
-        this.car.autopilot = autopilot;
+    addParktronic(parktronic) {
+        this.car.parktronic = parktronic;
         return this;
     }
 
@@ -59,6 +64,7 @@ console.log(myCar);
 const myNewCar = new CarBuilder()
     .addAutoPilot(false)
     .addParktronic(true)
+    .addSignaling(true)
     .updateEngine('V8')
     .build();
 
@@ -68,7 +74,7 @@ console.log(myNewCar);
  * Car {
       autoPilot: false,
       parktronic: false,
-      signaling: false,
+      signaling: true,
       autopilot: true,
       engine: 'V8'
     }

@@ -1,4 +1,7 @@
+'use strict';
+
 // Wrap already existing Class and extends his functional
+// Як одним класом можна розширити функціонал іншого класу
 
 class Car {
     constructor() {
@@ -61,6 +64,7 @@ class Parktronic {
 
 // Tesla Version with autopilot and parktronic
 let tesla = new Tesla();
+
 tesla = new Autopilot(tesla);
 tesla = new Parktronic(tesla);
 console.log(tesla.getPrice(), tesla.getDescription()); // 33000 Tesla with Autopilot with Parktronic

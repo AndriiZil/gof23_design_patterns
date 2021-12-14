@@ -1,3 +1,4 @@
+'use strict';
 // Only one instance, for example Basket, DBConnection, musicPlayer
 
 class Singleton {
@@ -20,6 +21,21 @@ console.log(new Singleton('MySQL')); // Singleton { db: 'Mongo' }
 
 console.log(new Singleton().getInstance()); // Mongo
 console.log(new Singleton().getInstance()); // Mongo
+
+// ------------------ Simple implementation ---------------------
+
+let instance;
+
+class Counter2 {
+    constructor() {
+        if (!instance) {
+            instance = this;
+            return instance;
+        }
+    }
+}
+
+// ------------------- Another implementation ----------------------
 
 class Counter {
     constructor() {

@@ -1,4 +1,7 @@
-// Bridge - міст / Abstraction Implementor
+'use strict';
+
+// Bridge - міст / Abstraction Implementor / Hard
+// Міст розділяє один або більше класів на абстракцію і реалізацію
 
 class Model {
     constructor(color) {
@@ -6,6 +9,7 @@ class Model {
     }
 }
 
+// Bridge
 class Color {
     constructor(type) {
         this.type = type;

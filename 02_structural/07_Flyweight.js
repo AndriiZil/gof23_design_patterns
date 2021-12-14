@@ -1,3 +1,4 @@
+'use strict';
 // Cache / Легковес
 
 class Auto {
@@ -16,6 +17,7 @@ class AutoFactory {
         if (model) {
             return model;
         }
+        console.count('model');
         this.models[name] = new Auto(name);
 
         return this.models[name];
@@ -35,6 +37,9 @@ const blackTesla = factory.create('Tesla'); // Returned from Cache
 
 factory.getModels();
 /**
+ * model: 1
+ * model: 2
+ * model: 3
  *   ┌─────────┬─────────┐
      │ (index) │  model  │
      ├─────────┼─────────┤

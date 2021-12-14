@@ -1,6 +1,9 @@
+'use strict';
+
 // Logging proxy
 // Access proxy
 // Cache proxy
+// Замість реальних обєктів пропонує обєкти замінники, які при певних подіях перенаправляють на інший обєкт
 
 class CarAccess {
     open() {

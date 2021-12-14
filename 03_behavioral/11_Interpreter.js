@@ -1,3 +1,5 @@
+'use strict';
+
 class Sum {
     constructor(left, right) {
         this.left = left;

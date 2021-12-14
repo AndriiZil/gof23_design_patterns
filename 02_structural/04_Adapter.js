@@ -1,3 +1,7 @@
+'use strict';
+
+// Адаптує несумісний з чимось обєкт і робить його сувмістимим
+
 class Engine2 {
     simpleInterface() {
         console.log('Engine 2.0 - tr-tr-tr')

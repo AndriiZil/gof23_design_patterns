@@ -1,4 +1,7 @@
+'use strict';
+
 // For hard logic under the hud
+// Задача, сховати складну логіку за складним фасадом і назовні віддавати зручний інтерфейс
 
 class Conveyor {
 
