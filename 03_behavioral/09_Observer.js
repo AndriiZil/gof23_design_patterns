@@ -3,6 +3,7 @@
 // Механізм підписки дозволяє одним обєктам слідкувати за іншими Один до багатьох
 // Приклад це будь яка підписка на новини ресурсу
 // Механізм слідкування одного обєкта за змінами іншого
+// Store
 
 class AutoNews {
 
@@ -17,7 +18,7 @@ class AutoNews {
     }
 
     notifyAll() {
-        return this.actions.forEach(subs => subs.inform(this));
+        return this.actions.forEach(subs => subs.inform(this)); // In order to send link for news
     }
 
     register(observer) {

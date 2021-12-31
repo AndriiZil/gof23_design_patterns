@@ -50,13 +50,20 @@ class onSwitchOffCommand {
 
 // ---------------- Implementation ----------------------
 
+// Check Engine status
 const engine = new Engine();
-
 console.log(engine); // Engine { state: false }
 
+// -------------------- On Engine --------------------------
+
+// Start Engine
 const onStartCommand = new OnStartCommand(engine);
-const driver = new Driver(onStartCommand);
-
+let driver = new Driver(onStartCommand);
 driver.execute();
-
 console.log(engine); // Engine { state: true }
+
+// ---------------------- Off Engine ------------------------
+
+driver = new onSwitchOffCommand(engine);
+driver.execute();
+console.log(engine); // Engine { state: false }
