@@ -36,7 +36,7 @@ class Engine extends Equipment {
 class Body extends Equipment {
     constructor() {
         super();
-        this.setName('Engine');
+        this.setName('Body');
         this.setPrice(3000);
     }
 }
@@ -44,7 +44,7 @@ class Body extends Equipment {
 class Tools extends Equipment {
     constructor() {
         super();
-        this.setName('Engine');
+        this.setName('Tools');
         this.setPrice(4000);
     }
 }
@@ -60,7 +60,9 @@ class Composite extends Equipment {
     }
 
     getPrice() {
-        return this.equipments.map(e => e.getPrice()).reduce((acc, val) => acc + val);
+        return this.equipments
+            .map(e => e.getPrice())
+            .reduce((acc, val) => acc + val);
     }
 }
 

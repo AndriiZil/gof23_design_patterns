@@ -9,11 +9,12 @@ class ArrayIterator {
         this.index = 0;
         this.element = el;
     }
-
     next() {
         return this.element[this.index++];
     }
-
+    prev() {
+        return this.element[--this.index - 1];
+    }
     hasNext() {
         return this.index < this.element.length;
     }
@@ -25,19 +26,26 @@ class ObjectIterator {
         this.keys = Object.keys(el);
         this.element = el;
     }
-
     next() {
         return this.element[this.keys[this.index++]];
     }
-
+    prev() {
+        return this.element[this.keys[--this.index - 1]];
+    }
     hasNext() {
         return this.index < this.keys.length;
     }
 }
 
 //--------------------- Realization -------------------------
+const music = [
+    { id: 1, name: 'Sound1' },
+    { id: 2, name: 'Sound2' },
+    { id: 3, name: 'Sound3' },
+]
 
-const collection1 = new ArrayIterator(['Audi', 'BMW', 'Tesla', 'Mercedes']);
+
+const collection1 = new ArrayIterator(music);
 
 while (collection1.hasNext()) {
     console.log(collection1.next());
@@ -45,9 +53,9 @@ while (collection1.hasNext()) {
 
 //----------------------------------------------------------
 const autos = {
-    audi: { model: 'Audi', color: 'black', price: '20000' },
-    bmw: { model: 'BMW', color: 'white', price: '30000' },
-    tesla: { model: 'Tesla', color: 'gray', price: '40000' },
+    audi: { id: 1, model: 'Audi', color: 'black', price: '20000' },
+    bmw: { id: 2, model: 'BMW', color: 'white', price: '30000' },
+    tesla: { id: 3, model: 'Tesla', color: 'gray', price: '40000' },
 }
 
 const collection2 = new ObjectIterator(autos);

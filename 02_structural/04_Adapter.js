@@ -46,4 +46,4 @@ console.log(myCar2.startEngine(engineAdapter));
 const myCar3 = new Auto();
 const engineAdapter2 = new EngineV8();
 
-console.log(myCar3.startEngine(engineAdapter2));
+console.log(myCar3.startEngine(engineAdapter2)); // Error
