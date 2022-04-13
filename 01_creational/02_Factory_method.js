@@ -23,6 +23,19 @@ class BmwFactory {
     }
 }
 
+class Factory {
+    constructor() {
+        this.types = {
+            bmw: new Car('BMW', 2020, 45000),
+            audi: new Car('AUDI', 2019, 29000),
+            opel: new Car('OPEL', 2018, 19000),
+        }
+    }
+    create(type) {
+        return this.types[type];
+    }
+}
+
 const factory = new BmwFactory();
 
 const x5 = factory.create('X5');
