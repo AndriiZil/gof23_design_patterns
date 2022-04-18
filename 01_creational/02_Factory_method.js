@@ -6,21 +6,21 @@
 // Коли потрібно створювати обєкти з одинаковою структурою, але різними даними
 
 class Bmw {
-    constructor(model, price, maxSpeed) {
-        this.model = model;
-        this.price = price;
-        this.maxSpeed = maxSpeed;
-    }
+  constructor(model, price, maxSpeed) {
+    this.model = model;
+    this.price = price;
+    this.maxSpeed = maxSpeed;
+  }
 }
 
 class BmwFactory {
-    create(type) {
-        if (type === 'X5') {
-            return new Bmw(type, 108000, 300);
-        } else if (type === 'X6') {
-            return new Bmw(type, 111000, 320);
-        }
+  create(type) {
+    if (type === 'X5') {
+      return new Bmw(type, 108000, 300);
+    } else if (type === 'X6') {
+      return new Bmw(type, 111000, 320);
     }
+  }
 }
 
 class Factory {
