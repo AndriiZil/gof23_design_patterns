@@ -1,31 +1,32 @@
 'use strict';
+
 // Cache / Легковес
 
 class Auto {
-    constructor(model) {
-        this.model = model;
-    }
+  constructor(model) {
+    this.model = model;
+  }
 }
 
 class AutoFactory {
-    constructor() {
-        this.models = {};
-    }
+  constructor() {
+    this.models = {};
+  }
 
-    create(name) {
-        let model = this.models[name];
-        if (model) {
-            return model;
-        }
-        console.count('model');
-        this.models[name] = new Auto(name);
-
-        return this.models[name];
+  create(name) {
+    let model = this.models[name];
+    if (model) {
+      return model;
     }
+    console.count('model');
+    this.models[name] = new Auto(name);
 
-    getModels() {
-        console.table(this.models);
-    }
+    return this.models[name];
+  }
+
+  getModels() {
+    console.table(this.models);
+  }
 }
 
 const factory = new AutoFactory();
@@ -41,11 +42,11 @@ factory.getModels();
  * model: 2
  * model: 3
  *   ┌─────────┬─────────┐
-     │ (index) │  model  │
-     ├─────────┼─────────┤
-     │   BMW   │  'BMW'  │
-     │  Audi   │ 'Audi'  │
-     │  Tesla  │ 'Tesla' │
-     └─────────┴─────────┘
+ │ (index) │  model  │
+ ├─────────┼─────────┤
+ │   BMW   │  'BMW'  │
+ │  Audi   │ 'Audi'  │
+ │  Tesla  │ 'Tesla' │
+ └─────────┴─────────┘
  *
  */

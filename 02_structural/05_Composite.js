@@ -7,70 +7,70 @@
 // Єдиний інтерфейс виклику
 
 class Equipment {
-    getPrice() {
-        return this.price || 0;
-    }
+  getPrice() {
+    return this.price || 0;
+  }
 
-    getName() {
-        return this.name;
-    }
+  getName() {
+    return this.name;
+  }
 
-    setName(name) {
-        this.name = name;
-    }
+  setName(name) {
+    this.name = name;
+  }
 
-    setPrice(price) {
-        this.price = price;
-    }
+  setPrice(price) {
+    this.price = price;
+  }
 
 }
 
 class Engine extends Equipment {
-    constructor() {
-        super();
-        this.setName('Engine');
-        this.setPrice(800);
-    }
+  constructor() {
+    super();
+    this.setName('Engine');
+    this.setPrice(800);
+  }
 }
 
 class Body extends Equipment {
-    constructor() {
-        super();
-        this.setName('Body');
-        this.setPrice(3000);
-    }
+  constructor() {
+    super();
+    this.setName('Body');
+    this.setPrice(3000);
+  }
 }
 
 class Tools extends Equipment {
-    constructor() {
-        super();
-        this.setName('Tools');
-        this.setPrice(4000);
-    }
+  constructor() {
+    super();
+    this.setName('Tools');
+    this.setPrice(4000);
+  }
 }
 
 class Composite extends Equipment {
-    constructor() {
-        super();
-        this.equipments = [];
-    }
+  constructor() {
+    super();
+    this.equipments = [];
+  }
 
-    add(equipment) {
-        this.equipments.push(equipment);
-    }
+  add(equipment) {
+    this.equipments.push(equipment);
+  }
 
-    getPrice() {
-        return this.equipments
-            .map(e => e.getPrice())
-            .reduce((acc, val) => acc + val);
-    }
+  getPrice() {
+    return this.equipments
+      .map(e => e.getPrice())
+      .reduce((acc, val) => acc + val);
+  }
 }
 
 class Car extends Composite {
-    constructor() {
-        super();
-        this.setName('Audi');
-    }
+  constructor() {
+    super();
+    this.setName('Audi');
+  }
 }
 
 const myCar = new Car();

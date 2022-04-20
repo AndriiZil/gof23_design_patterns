@@ -5,50 +5,68 @@
 
 class Conveyor {
 
-    setBody() { console.log('Body set!') }
+  setBody() {
+    console.log('Body set!')
+  }
 
-    getEngine() { console.log('Dismantle Engine!') }
+  getEngine() {
+    console.log('Dismantle Engine!')
+  }
 
-    setEngine() { console.log('Engine set!') }
+  setEngine() {
+    console.log('Engine set!')
+  }
 
-    setInterior() { console.log('Exterior added!') }
+  setInterior() {
+    console.log('Exterior added!')
+  }
 
-    getInterior() { console.log('Update interior!') }
+  getInterior() {
+    console.log('Update interior!')
+  }
 
-    setExterior() { console.log('Added interior!') }
+  setExterior() {
+    console.log('Added interior!')
+  }
 
-    setWheels() { console.log('Wheels!') }
+  setWheels() {
+    console.log('Wheels!')
+  }
 
-    addElectronics() { console.log('Added electronics!') }
+  addElectronics() {
+    console.log('Added electronics!')
+  }
 
-    paint() { console.log('Car painted!') }
+  paint() {
+    console.log('Car painted!')
+  }
 
 }
 
 class ConveyorFacade {
-    constructor(car) {
-        this.car = car;
-    }
+  constructor(car) {
+    this.car = car;
+  }
 
-    assembleCar() {
-        this.car.setBody();
-        this.car.setEngine();
-        this.car.setInterior();
-        this.car.setExterior();
-        this.car.setWheels();
-        this.car.addElectronics();
-        this.car.paint();
-    }
+  assembleCar() {
+    this.car.setBody();
+    this.car.setEngine();
+    this.car.setInterior();
+    this.car.setExterior();
+    this.car.setWheels();
+    this.car.addElectronics();
+    this.car.paint();
+  }
 
-    changeEngine() {
-        this.car.getEngine();
-        this.car.setEngine();
-    }
+  changeEngine() {
+    this.car.getEngine();
+    this.car.setEngine();
+  }
 
-    changeInterior() {
-        this.car.getInterior();
-        this.car.setInterior();
-    }
+  changeInterior() {
+    this.car.getInterior();
+    this.car.setInterior();
+  }
 }
 
 const conveyor = new ConveyorFacade(new Conveyor());
@@ -58,12 +76,12 @@ let car = conveyor.assembleCar();
 console.log(car);
 /**
  *   Body set!
-     Engine set!
-     Exterior added!
-     Added interior!
-     Wheels!
-     Added electronics!
-     Car painted!
+ Engine set!
+ Exterior added!
+ Added interior!
+ Wheels!
+ Added electronics!
+ Car painted!
  *
  */
 
@@ -73,7 +91,7 @@ car = conveyor.changeInterior();
 console.log(car);
 /**
  *   Dismantle Engine!
-     Engine set!
-     Update interior!
-     Exterior added!
+ Engine set!
+ Update interior!
+ Exterior added!
  */
