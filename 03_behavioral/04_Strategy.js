@@ -3,30 +3,30 @@
 // Обєднує складні алгоримти в класи, а потім в залежності від умови викликає той чи інший клас
 
 function baseStrategy(amount) {
-    return amount;
+  return amount;
 }
 
 function premiumStrategy(amount) {
-    return amount * 0.85;
+  return amount * 0.85;
 }
 
 function platinumStrategy(amount) {
-    return amount * 0.65;
+  return amount * 0.65;
 }
 
 class AutoCart {
-    constructor(discount) {
-        this.discount = discount;
-        this.amount = 0;
-    }
+  constructor(discount) {
+    this.discount = discount;
+    this.amount = 0;
+  }
 
-    checkout() {
-        return this.discount(this.amount);
-    }
+  checkout() {
+    return this.discount(this.amount);
+  }
 
-    setAmount(amount) {
-        this.amount = amount;
-    }
+  setAmount(amount) {
+    this.amount = amount;
+  }
 }
 
 // --------------------- Realization -------------------

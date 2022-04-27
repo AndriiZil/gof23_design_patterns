@@ -3,28 +3,28 @@
 // Фото, Самий простий приклад текстовий редактор, який дозволяє зберігати і востановлювати із памяті попередній стан, навіть після його зміни
 
 class Memento {
-    constructor(value) {
-        this.value = value;
-    }
+  constructor(value) {
+    this.value = value;
+  }
 }
 
 const creator = {
-    save: val => new Memento(val),
-    restore: memento => memento.value,
+  save: val => new Memento(val),
+  restore: memento => memento.value,
 }
 
 class Caretaker {
-    constructor() {
-        this.values = [];
-    }
+  constructor() {
+    this.values = [];
+  }
 
-    addMemento(memento) {
-        this.values.push(memento);
-    }
+  addMemento(memento) {
+    this.values.push(memento);
+  }
 
-    getMemento(index) {
-        return this.values[index];
-    }
+  getMemento(index) {
+    return this.values[index];
+  }
 }
 
 // ----------------------------- Check Implementation -----------------------
