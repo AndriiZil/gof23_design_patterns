@@ -30,7 +30,7 @@ class Shipping extends OrderStatus {
 
 class Delivered extends OrderStatus {
   constructor() {
-    super('delivered', Delivered);
+    super('delivered', Shipping);
   }
 }
 
