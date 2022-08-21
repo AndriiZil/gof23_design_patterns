@@ -5,6 +5,14 @@
 // Даний клас можна назвати суперклассом
 // Коли потрібно створювати обєкти з одинаковою структурою, але різними даними
 
+class Car {
+  constructor(name, year, price) {
+    this.name = name;
+    this.year = year;
+    this.price = price;
+  }
+}
+
 class Bmw {
   constructor(model, price, maxSpeed) {
     this.model = model;
@@ -24,16 +32,16 @@ class BmwFactory {
 }
 
 class Factory {
-    constructor() {
-        this.types = {
-            bmw: new Car('BMW', 2020, 45000),
-            audi: new Car('AUDI', 2019, 29000),
-            opel: new Car('OPEL', 2018, 19000),
-        }
+  constructor() {
+    this.types = {
+      bmw: new Car('BMW', 2020, 45000),
+      audi: new Car('AUDI', 2019, 29000),
+      opel: new Car('OPEL', 2018, 19000),
     }
-    create(type) {
-        return this.types[type];
-    }
+  }
+  create(type) {
+    return this.types[type];
+  }
 }
 
 const factory = new BmwFactory();
@@ -43,3 +51,8 @@ const x6 = factory.create('X6');
 
 console.log(x5); // Bmw { model: 'X5', price: 108000, maxSpeed: 300 }
 console.log(x6); // Bmw { model: 'X6', price: 111000, maxSpeed: 320 }
+
+const superFactory = new Factory();
+console.log(superFactory.create('bmw')); // Car { name: 'BMW', year: 2020, price: 45000 }
+console.log(superFactory.create('audi')); // Car { name: 'AUDI', year: 2019, price: 29000 }
+console.log(superFactory.create('opel')); // Car { name: 'OPEL', year: 2018, price: 19000 }
