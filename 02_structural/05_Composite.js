@@ -67,13 +67,13 @@ class Composite extends Equipment {
 }
 
 class Car extends Composite {
-  constructor() {
+  constructor(name) {
     super();
-    this.setName('Audi');
+    this.setName(name);
   }
 }
 
-const myCar = new Car();
+const myCar = new Car('Audi');
 
 myCar.add(new Engine());
 myCar.add(new Body());
