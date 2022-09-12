@@ -28,11 +28,11 @@ class Audi extends Auto {
 
 function exportVisitor(auto) {
   if (auto instanceof Tesla) {
-    auto.export = console.log(`Exported data: ${auto.info()}`);
+    auto.export = () => console.log(`Exported data: ${auto.info()}`);
   } else if (auto instanceof Bmw) {
-    auto.export = console.log(`Exported data: ${auto.info()}`);
+    auto.export = () => console.log(`Exported data: ${auto.info()}`);
   } else if (auto instanceof Audi) {
-    auto.export = console.log(`Exported data: ${auto.info()}`);
+    auto.export = () => console.log(`Exported data: ${auto.info()}`);
   }
 }
 
@@ -40,6 +40,10 @@ const tesla = new Tesla();
 const bmw = new Bmw();
 const audi = new Audi();
 
-console.log(tesla.accept(exportVisitor)); // Exported data: It is a Tesla car!
-console.log(bmw.accept(exportVisitor)); // Exported data: It is a BMW car!
-console.log(audi.accept(exportVisitor)); // Exported data: It is an Audi car!
+tesla.accept(exportVisitor);
+bmw.accept(exportVisitor);
+audi.accept(exportVisitor);
+
+tesla.export(); // Exported data: It is a Tesla car!
+bmw.export(); // Exported data: It is a BMW car!
+audi.export(); // Exported data: It is an Audi car!
