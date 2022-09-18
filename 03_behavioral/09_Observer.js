@@ -18,7 +18,7 @@ class AutoNews {
   }
 
   notifyAll() {
-    return this.actions.forEach(subs => subs.inform(this)); // In order to send link for news
+    return this.actions.forEach(subs => subs.inform(this.news)); // In order to send link for news
   }
 
   register(observer) {
@@ -32,13 +32,13 @@ class AutoNews {
 
 class Jack {
   inform(message) {
-    console.log(`Jack has been informed about: ${message.news}`);
+    console.log(`Jack has been informed about: ${message}`);
   }
 }
 
 class Max {
   inform(message) {
-    console.log(`Max has been informed about: ${message.news}`);
+    console.log(`Max has been informed about: ${message}`);
   }
 }
 
@@ -54,4 +54,11 @@ autoNews.setNews('New Tesla price is 40 000');
 /**
  *  Jack has been informed about: New Tesla price is 40 000
  Max has been informed about: New Tesla price is 40 000
+ */
+
+autoNews.unregister(Jack);
+
+autoNews.setNews('Something happened');
+/**
+ * Max has been informed about: Something happened
  */
