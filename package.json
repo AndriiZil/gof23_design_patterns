@@ -1,0 +1,23 @@
+{
+  "name": "gof23_design_patterns",
+  "version": "1.0.0",
+  "description": "#### Creational",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriiZil/gof23_design_patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriiZil/gof23_design_patterns/issues"
+  },
+  "homepage": "https://github.com/AndriiZil/gof23_design_patterns#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
