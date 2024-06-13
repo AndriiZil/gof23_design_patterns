@@ -45,11 +45,10 @@ class ObjectIterator {
 
 //--------------------- Realization -------------------------
 const music = [
-  {id: 1, name: 'Sound1'},
-  {id: 2, name: 'Sound2'},
-  {id: 3, name: 'Sound3'},
-]
-
+  { id: 1, name: 'Sound1' },
+  { id: 2, name: 'Sound2' },
+  { id: 3, name: 'Sound3' },
+];
 
 const collection1 = new ArrayIterator(music);
 
@@ -59,10 +58,10 @@ while (collection1.hasNext()) {
 
 //----------------------------------------------------------
 const autos = {
-  audi: {id: 1, model: 'Audi', color: 'black', price: '20000'},
-  bmw: {id: 2, model: 'BMW', color: 'white', price: '30000'},
-  tesla: {id: 3, model: 'Tesla', color: 'gray', price: '40000'},
-}
+  audi: { id: 1, model: 'Audi', color: 'black', price: '20000' },
+  bmw: { id: 2, model: 'BMW', color: 'white', price: '30000' },
+  tesla: { id: 3, model: 'Tesla', color: 'gray', price: '40000' },
+};
 
 const collection2 = new ObjectIterator(autos);
 

@@ -4,14 +4,13 @@
 // Паттерн який дозволяє передавати запити по цепочці обовязків, і на кожному етапі перевіряється чи логіка може
 // бути виконана на даному етапі чи буде передаватись далі по цепочці
 
-
 class Account {
   pay(orderPrice) {
     if (this.canPay(orderPrice)) {
       console.log(`Paid ${orderPrice} using ${this.name}`);
     } else if (this.incomer) {
       console.log(`Cannot pay using ${this.name}`);
-      this.incomer.pay(orderPrice)
+      this.incomer.pay(orderPrice);
     } else {
       console.log('Unfortunately, not enough money');
     }

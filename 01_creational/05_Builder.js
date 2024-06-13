@@ -39,7 +39,6 @@ class CarBuilder {
   build() {
     return this.car;
   }
-
 }
 
 const myCar = new CarBuilder()

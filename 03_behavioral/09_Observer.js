@@ -6,7 +6,6 @@
 // Store
 
 class AutoNews {
-
   constructor() {
     this.news = '';
     this.actions = [];
@@ -18,7 +17,7 @@ class AutoNews {
   }
 
   notifyAll() {
-    return this.actions.forEach(subs => subs.inform(this.news)); // In order to send link for news
+    return this.actions.forEach((subs) => subs.inform(this.news)); // In order to send link for news
   }
 
   register(observer) {
@@ -26,7 +25,7 @@ class AutoNews {
   }
 
   unregister(observer) {
-    this.actions = this.actions.filter(el => !(el instanceof observer));
+    this.actions = this.actions.filter((el) => !(el instanceof observer));
   }
 }
 

@@ -4,7 +4,8 @@
   "description": "#### Creational",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon index.js"
+    "start:dev": "nodemon index.js",
+    "format": "yarn prettier . --write"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/AndriiZil/gof23_design_patterns#readme",
   "devDependencies": {
-    "nodemon": "2.0.22"
+    "nodemon": "2.0.22",
+    "prettier": "3.3.2"
   }
 }

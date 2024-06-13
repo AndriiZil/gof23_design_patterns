@@ -41,7 +41,7 @@ class Order {
 
   nextState() {
     this.state = this.state.next();
-  };
+  }
 
   cancelOrder() {
     if (this.state.name === 'waitingForPayment') {

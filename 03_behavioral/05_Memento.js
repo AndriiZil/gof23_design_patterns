@@ -9,9 +9,9 @@ class Memento {
 }
 
 const creator = {
-  save: val => new Memento(val),
-  restore: memento => memento.value,
-}
+  save: (val) => new Memento(val),
+  restore: (memento) => memento.value,
+};
 
 class Caretaker {
   constructor() {

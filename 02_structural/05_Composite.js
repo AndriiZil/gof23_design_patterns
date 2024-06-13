@@ -22,7 +22,6 @@ class Equipment {
   setPrice(price) {
     this.price = price;
   }
-
 }
 
 class Engine extends Equipment {
@@ -61,7 +60,7 @@ class Composite extends Equipment {
 
   getPrice() {
     return this.equipments
-      .map(e => e.getPrice())
+      .map((e) => e.getPrice())
       .reduce((acc, val) => acc + val);
   }
 }

@@ -5,7 +5,6 @@
 // і заточити під виконання певних задач
 
 class TeslaCar {
-
   constructor(model, price, interior, autopilot) {
     this.model = model;
     this.price = price;
@@ -16,7 +15,6 @@ class TeslaCar {
   produce() {
     return new TeslaCar(this.model, this.price, this.interior, this.autopilot);
   }
-
 }
 
 // Produce base auto

@@ -4,13 +4,13 @@
 
 class Engine2 {
   simpleInterface() {
-    console.log('Engine 2.0 - tr-tr-tr')
+    console.log('Engine 2.0 - tr-tr-tr');
   }
 }
 
 class EngineV8 {
   complecatedInterface() {
-    console.log('Engine V8! - wroom wroom!')
+    console.log('Engine V8! - wroom wroom!');
   }
 }
 
@@ -26,7 +26,7 @@ class EngineV8Adapter {
 
 class Auto {
   startEngine(engine) {
-    engine.simpleInterface()
+    engine.simpleInterface();
   }
 }
 

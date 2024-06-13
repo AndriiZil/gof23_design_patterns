@@ -28,7 +28,7 @@ class EventQueue {
   }
 
   hasNext() {
-    return (this.index !== -1 && ((this.index - 1) <= this.events.length));
+    return this.index !== -1 && this.index - 1 <= this.events.length;
   }
 
   hasPrev() {
@@ -47,6 +47,7 @@ class EventQueue {
       event = this.events[this.index];
       this.index -= 1;
     }
+    console.log({ event });
     return event;
   }
 }
@@ -54,25 +55,31 @@ const events = new EventQueue();
 
 events.dispatch({
   type: 'ADD',
-  value: 1
+  value: 1,
 });
 
 events.dispatch({
   type: 'ADD',
-  value: 2
+  value: 2,
 });
 
 events.dispatch({
   type: 'UNDO',
-  value: 5,
 });
 
 events.dispatch({
   type: 'UNDO',
-  value: 5,
+});
+
+events.dispatch({
+  type: 'UNDO',
+});
+
+events.dispatch({
+  type: 'UNDO',
 });
 
 /**
- * { type: 'ADD', value: 2 }
- * { type: 'ADD', value: 1 }
+ * { event: { type: 'ADD', value: 2 } }
+ * { event: { type: 'ADD', value: 1 } }
  */

@@ -4,43 +4,41 @@
 // Задача, сховати складну логіку за складним фасадом і назовні віддавати зручний інтерфейс
 
 class Conveyor {
-
   setBody() {
-    console.log('Body set!')
+    console.log('Body set!');
   }
 
   getEngine() {
-    console.log('Dismantle Engine!')
+    console.log('Dismantle Engine!');
   }
 
   setEngine() {
-    console.log('Engine set!')
+    console.log('Engine set!');
   }
 
   setInterior() {
-    console.log('Exterior added!')
+    console.log('Exterior added!');
   }
 
   getInterior() {
-    console.log('Update interior!')
+    console.log('Update interior!');
   }
 
   setExterior() {
-    console.log('Added interior!')
+    console.log('Added interior!');
   }
 
   setWheels() {
-    console.log('Wheels!')
+    console.log('Wheels!');
   }
 
   addElectronics() {
-    console.log('Added electronics!')
+    console.log('Added electronics!');
   }
 
   paint() {
-    console.log('Car painted!')
+    console.log('Car painted!');
   }
-
 }
 
 class ConveyorFacade {
